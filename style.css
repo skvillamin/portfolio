@@ -11,8 +11,10 @@ body {
 
 nav ul{
   display: contents;
+  list-style: none;
 }
 
 nav li {
   display: contents;
+  list-style: none;
 }

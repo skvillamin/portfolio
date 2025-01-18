@@ -1,38 +1,124 @@
-body {
-    /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
-    font: 100%/1.5 system-ui;
-    max-width: 100ch;
-    margin-inline: 'auto';
-    padding: 1em;
-
-  }
-
-nav {
-    display: flex;
-    margin-bottom: 2em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+:root {
+  --color-accent: oklch(65% 50% 0);
+  --color-border: oklch(80% 3% 200);
 }
 
-nav ul{
-  list-style: none;
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 100ch;
+  margin-inline: auto;
+  padding: 1em;
+}
+
+nav {
+  display: flex;
+  margin-bottom: 2em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+nav ul {
+  display: contents;
 }
 
 nav li {
-  list-style: none;
+  display: contents;
 }
 
 nav a {
-  flex: 1
-  text-decoration: none; 
-  color: inherit; 
-  text-align: center; 
-  padding: 0.5em; 
-  display: inline-block;
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a.current {
+  border-bottom: 0.4em solid var(--color-border);
+  padding-bottom: 0.1em;
 }
 
 nav a:hover {
-  border-bottom: 0.4em solid oklch(80% 3% 200); 
-  padding-bottom: 0.1em; 
+  border-bottom: 0.4em solid var(--color-accent);
+  padding-bottom: 0.1em;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;  
+  gap: 1em; 
+  max-width: 500px; 
+  margin: 0 auto; 
+}
+
+form label {
+  grid-column: 1 / 2; 
+}
+
+form input,
+form textarea,
+form button {
+  display: block; 
+  width: 100%; 
+  padding: 0.5em; 
+  box-sizing: border-box; 
+}
+
+form button {
+  grid-column: 1 / -1; 
+  cursor: pointer; 
+  align-self: center; 
+}
+
+
+form textarea {
+  height: 150px; 
+}
+
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+}
+
+article{
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 1em;
+}
+
+h1{
+  line-height: 1.1;
+  color: #CD5E77;
+}
+
+h2{
+  line-height: 1.1;
+}
+
+h3{
+  line-height: 1.1;
+}
+
+h4{
+  line-height: 1.1;
+  text-decoration: underline;
+  color: #CD5E77;
+}
+
+h5{
+  line-height: 1.1;
+}
+
+h6{
+  line-height: 1.1;
+}
+
+.subtext {
+  font-size: 1rem; 
+  color: #666; 
+  margin-top: 0.5em; 
+  line-height: 1.5; 
+  font-style: italic;
 }

@@ -8,3 +8,11 @@ body {
     padding: 1em;
 
   }
+
+nav ul{
+  display: contents;
+}
+
+nav li {
+  display: contents;
+}

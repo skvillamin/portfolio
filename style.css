@@ -9,6 +9,10 @@ body {
 
   }
 
+nav {
+    display: flex;
+}
+
 nav ul{
   display: contents;
   list-style: none;
@@ -17,4 +21,8 @@ nav ul{
 nav li {
   display: contents;
   list-style: none;
+}
+
+nav a {
+  flex: 1
 }

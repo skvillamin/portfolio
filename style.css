@@ -88,37 +88,29 @@ article{
   gap: 1em;
 }
 
-h1{
-  line-height: 1.1;
-  color: #CD5E77;
+h1 {
+  font-size: 3rem;
+  color: #CD5E77; 
+  font-weight: bold;
+  margin-bottom: 0.5em;
 }
 
-h2{
-  line-height: 1.1;
+h2 {
+  font-size: 1.8rem;
+  color: #4B4B4B; 
+  font-weight: normal;
+  margin-bottom: 1.5em;
 }
 
-h3{
-  line-height: 1.1;
-}
-
-h4{
-  line-height: 1.1;
-  text-decoration: underline;
-  color: #CD5E77;
-}
-
-h5{
-  line-height: 1.1;
-}
-
-h6{
-  line-height: 1.1;
+h3, h4 {
+  font-size: 1.4rem;
+  color: #333;
 }
 
 .subtext {
-  font-size: 1rem; 
-  color: #666; 
-  margin-top: 0.5em; 
-  line-height: 1.5; 
+  font-size: 1rem;
+  color: #666;
+  margin-top: -1em;
+  line-height: 1.5;
   font-style: italic;
 }

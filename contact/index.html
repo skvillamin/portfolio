@@ -4,20 +4,12 @@
     <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../global.js" type="module"></script>
     <title>Contact</title>
 </head>
 <body>
-    <nav>
-        <ul>        
-            <li><a href="../index.html">Home</a></li>
-            <li><a class="current" href="index.html">Contact</a></li>
-            <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
-            <li><a href="https://github.com/skvillamin" target="_blank">Profile</a></li>
-        </ul>
-    </nav>
 
-    <form action="mailto:svillamin@ucsd.edu" method="POST", enctype="text/plain">
+    <form action="mailto:svillamin@ucsd.edu" method="GET">
         <label for="email">Email Address:</label>
         <input type="email" name="email" required>
 

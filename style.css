@@ -1,6 +1,11 @@
 :root {
-  --color-accent: oklch(65% 50% 0);
-  --color-border: oklch(80% 3% 200);
+  --color-accent: oklch(70.31% 0.0723 146.59);
+  --color-border: oklch(66.19% 0.0723 146.59 / 40%);
+  color-scheme: light;
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --text-light: #000000;
+  --text-dark: #ffffff;
 }
 
 body {
@@ -13,7 +18,8 @@ body {
 nav {
   display: flex;
   margin-bottom: 2em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid;
+  border-bottom-color: var(--color-border);
 }
 
 nav ul {
@@ -43,6 +49,7 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%)
 }
 
 form {
@@ -77,28 +84,46 @@ form textarea {
   height: 150px; 
 }
 
-.projects{
+.projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em; 
+  padding: 1em; 
 }
 
-article{
+.projects article {
+  display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
+  margin: 0;
   gap: 1em;
+  background-color: #f9f9f9; 
+  border: 1px solid #ccc; 
+  padding: 1em; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.projects article h2 {
+  margin: 0;
+}
+
+.projects article img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 h1 {
   font-size: 3rem;
-  color: #CD5E77; 
+  color: #82AC85; 
   font-weight: bold;
   margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: 1.8rem;
-  color: #4B4B4B; 
-  font-weight: normal;
+  color: #82AC85; 
+  font-weight: bold;
   margin-bottom: 1.5em;
 }
 
@@ -113,4 +138,12 @@ h3, h4 {
   margin-top: -1em;
   line-height: 1.5;
   font-style: italic;
+}
+
+.color-scheme{
+  position:absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+
 }

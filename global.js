@@ -1,5 +1,4 @@
 console.log('IT’S ALIVE!');
-
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
@@ -9,9 +8,9 @@ const ARE_WE_HOME = document.documentElement.classList.contains('home');
 // Define pages array
 let pages = [
   { url: '', title: 'Home' },
-  { url: 'projects/', title: 'Projects' },
-  { url: 'resume/', title: 'Resume' },
-  { url: 'contact/', title: 'Contact' },
+  { url: 'projects/index.html', title: 'Projects' },
+  { url: 'resume/index.html', title: 'Resume' },
+  { url: 'contact/index.html', title: 'Contact' },
   { url: 'https://github.com/skvillamin', title: 'GitHub' },
 ];
 
@@ -73,3 +72,44 @@ if ("colorScheme" in localStorage) {
   select.addEventListener('input', function (event) {
     setColorScheme(event.target.value);
   });
+
+export async function fetchJSON(url, options = {}) {
+  try {
+      const response = await fetch(url, options);
+      if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+      }
+      return await response.json();
+  } catch (error) {
+      console.error('Error fetching data:', error);
+  }
+}
+
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) {
+      console.error("Invalid container element provided.");
+      return;
+  }
+
+  containerElement.innerHTML = '';
+
+  if (projects.length === 0) {
+      containerElement.innerHTML = '<p>No projects available.</p>';
+      return;
+  }
+
+  projects.forEach(project => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+          <${headingLevel}>${project.title}</${headingLevel}>
+          <img src="${project.image}" alt="${project.title}">
+          <p>${project.description}</p>
+      `;
+      containerElement.appendChild(article);
+  });
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

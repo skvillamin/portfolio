@@ -1,13 +1,14 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet ducimus quos rem accusantium aliquid et ex nam exercitationem eos soluta perspiciatis consectetur vero, hic expedita maiores necessitatibus numquam? Odit!"
+        "title": "The Battle for Carry: An Analysis of ADC vs Mid Players and Post-Game Role Predictive Model",
+        "year": "March 2024",
+        "image" : "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Analyzed 2022 League of Legends data to assess the effectiveness of ADC and Mid roles in post-game performance."
     },
     {
-        "title": "Numquam ratione veritatis sed.",
+        "title": "Analysis on the Impact of PokéStops Proximity on Restaurant Traffic",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptate fuga autem iste, sunt ipsam assumenda labore ullam nisi accusamus alias mollitia voluptas. Eius aliquam quos, repellat asperiores dolores sapiente! Quae deserunt architecto reprehenderit praesentium, provident veniam! Provident, perferendis."
+        "description": "Analyzed Yelp restaurant data to assess the impact of PokéStop proximity on restaurant traffic."
     },
     {
         "title": "Omnis repellendus voluptates exercitationem.",

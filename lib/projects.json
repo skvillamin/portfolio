@@ -1,63 +1,73 @@
 [
     {
         "title": "The Battle for Carry: An Analysis of ADC vs Mid Players and Post-Game Role Predictive Model",
-        "year": "March 2024",
+        "year": "2024",
         "image" : "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Analyzed 2022 League of Legends data to assess the effectiveness of ADC and Mid roles in post-game performance."
     },
     {
         "title": "Analysis on the Impact of PokéStops Proximity on Restaurant Traffic",
-        "year": "September 2024 - December 2024",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Analyzed Yelp restaurant data to assess the impact of PokéStop proximity on restaurant traffic."
     },
     {
-        "title": "Omnis repellendus voluptates exercitationem.",
+        "title": "Sentiment Analysis on Amazon Book Reviews",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Laudantium ut repellendus amet adipisci modi in nihil voluptatem eveniet natus, dicta cum asperiores quae magnam ex dolor. Dolores optio, dolore modi praesentium voluptatibus voluptates repudiandae numquam perferendis ducimus soluta!"
     },
     {
-        "title": "Iure beatae omnis natus.",
+        "title": "Predictive Modeling on Mahjong Optimal Strategies",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Eveniet unde rerum rem error delectus officiis architecto! Ratione repudiandae voluptate, cum quis enim laborum sunt id, dolore inventore autem magni molestiae impedit nisi in, rerum doloribus debitis. Autem, saepe."
     },
     {
         "title": "Accusantium numquam ipsum nobis!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Dolorem totam laborum aliquam. Eligendi minus molestias a recusandae libero vitae iusto quo quisquam est accusantium tempora debitis autem voluptates ea magnam ipsam ratione alias, rem quod ex aspernatur eos?"
     },
     {
         "title": "Perspiciatis dignissimos ab porro.",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Sed laudantium molestiae suscipit, molestias perspiciatis reprehenderit praesentium possimus, dignissimos quasi facere assumenda saepe, ut repellendus atque voluptate dolorem porro esse. Corrupti tempora ad est debitis itaque tempore magnam dolores!"
     },
     {
         "title": "Aspernatur a ea dolores.",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Et, porro eveniet laborum dolorem modi ad unde vero dignissimos a laudantium sequi eos error, quasi, cum esse! Culpa voluptate, deserunt distinctio facilis tenetur repellat aperiam quasi exercitationem quis harum."
     },
     {
         "title": "Asperiores, reiciendis! Doloremque, exercitationem?",
+        "year": "2022",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Odit nisi distinctio doloremque accusamus deleniti ratione dolorum animi natus voluptatum inventore officia, asperiores autem, quod repellendus. Autem suscipit reiciendis est error odio nihil hic, obcaecati repellendus dolorem? Sint, et."
     },
     {
         "title": "In aperiam qui accusamus!",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Deleniti repudiandae iste id provident dicta perferendis, iusto porro natus ipsum eveniet consequuntur inventore rerum dolores pariatur cumque error nam velit, illo non voluptatibus. Dolorum ipsam suscipit corrupti similique quam?"
     },
     {
         "title": "Placeat ducimus consequuntur aliquid.",
+        "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Non aspernatur aliquid, quia odit voluptatibus dolor eum rem, aperiam debitis labore quis nam tempore! Eum eligendi adipisci odio hic aspernatur! Culpa inventore consequuntur exercitationem eaque cumque voluptate nobis quisquam?"
     },
     {
         "title": "Iusto necessitatibus inventore minus!",
+        "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Dolor perferendis quos velit esse! Nesciunt sequi doloribus aut aliquid quo. Aut consequuntur fugiat voluptatum officia totam quaerat praesentium nemo rerum tempore tenetur alias odit maxime, quia aliquid culpa. In!"
     },
     {
         "title": "Soluta esse molestias saepe!",
+        "year": "2023",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Suscipit sit eius possimus quam aut at maxime, doloremque minima assumenda rem beatae itaque, obcaecati eligendi officiis repellendus? Quos reprehenderit maiores unde ratione. At laboriosam aliquam sunt repellat ex placeat?"
     }

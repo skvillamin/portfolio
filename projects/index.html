@@ -4,74 +4,26 @@
     <link rel="stylesheet" href="../style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="../global.js" type="module"></script>
     <title>Portfolio</title>
 </head>
 <body>
     <h1 class="projects-title">Projects</h1>
-    <div class="projects">
-        <script src="../global.js" type="module"></script>
-        <script src="projects.js" type="module"></script>
-        <!-- <article>
-            <h2>Lorem ipsum dolor sit.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eveniet ducimus quos rem accusantium aliquid et ex nam exercitationem eos soluta perspiciatis consectetur vero, hic expedita maiores necessitatibus numquam? Odit!</p>
-        </article>
-        <article>
-            <h2>Numquam ratione veritatis sed.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Voluptate fuga autem iste, sunt ipsam assumenda labore ullam nisi accusamus alias mollitia voluptas. Eius aliquam quos, repellat asperiores dolores sapiente! Quae deserunt architecto reprehenderit praesentium, provident veniam! Provident, perferendis.</p>
-        </article>
-        <article>
-            <h2>Omnis repellendus voluptates exercitationem.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Laudantium ut repellendus amet adipisci modi in nihil voluptatem eveniet natus, dicta cum asperiores quae magnam ex dolor. Dolores optio, dolore modi praesentium voluptatibus voluptates repudiandae numquam perferendis ducimus soluta!</p>
-        </article>
-        <article>
-            <h2>Iure beatae omnis natus.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Eveniet unde rerum rem error delectus officiis architecto! Ratione repudiandae voluptate, cum quis enim laborum sunt id, dolore inventore autem magni molestiae impedit nisi in, rerum doloribus debitis. Autem, saepe.</p>
-        </article>
-        <article>
-            <h2>Accusantium numquam ipsum nobis!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Dolorem totam laborum aliquam. Eligendi minus molestias a recusandae libero vitae iusto quo quisquam est accusantium tempora debitis autem voluptates ea magnam ipsam ratione alias, rem quod ex aspernatur eos?</p>
-        </article>
-        <article>
-            <h2>Perspiciatis dignissimos ab porro.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Sed laudantium molestiae suscipit, molestias perspiciatis reprehenderit praesentium possimus, dignissimos quasi facere assumenda saepe, ut repellendus atque voluptate dolorem porro esse. Corrupti tempora ad est debitis itaque tempore magnam dolores!</p>
-        </article>
-        <article>
-            <h2>Aspernatur a ea dolores.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Et, porro eveniet laborum dolorem modi ad unde vero dignissimos a laudantium sequi eos error, quasi, cum esse! Culpa voluptate, deserunt distinctio facilis tenetur repellat aperiam quasi exercitationem quis harum.</p>
-        </article>
-        <article>
-            <h2>Asperiores, reiciendis! Doloremque, exercitationem?</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Odit nisi distinctio doloremque accusamus deleniti ratione dolorum animi natus voluptatum inventore officia, asperiores autem, quod repellendus. Autem suscipit reiciendis est error odio nihil hic, obcaecati repellendus dolorem? Sint, et.</p>
-        </article>
-        <article>
-            <h2>In aperiam qui accusamus!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Deleniti repudiandae iste id provident dicta perferendis, iusto porro natus ipsum eveniet consequuntur inventore rerum dolores pariatur cumque error nam velit, illo non voluptatibus. Dolorum ipsam suscipit corrupti similique quam?</p>
-        </article>
-        <article>
-            <h2>Placeat ducimus consequuntur aliquid.</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Non aspernatur aliquid, quia odit voluptatibus dolor eum rem, aperiam debitis labore quis nam tempore! Eum eligendi adipisci odio hic aspernatur! Culpa inventore consequuntur exercitationem eaque cumque voluptate nobis quisquam?</p>
-        </article>
-        <article>
-            <h2>Iusto necessitatibus inventore minus!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Dolor perferendis quos velit esse! Nesciunt sequi doloribus aut aliquid quo. Aut consequuntur fugiat voluptatum officia totam quaerat praesentium nemo rerum tempore tenetur alias odit maxime, quia aliquid culpa. In!</p>
-        </article>
-        <article>
-            <h2>Soluta esse molestias saepe!</h2>
-            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="">
-            <p>Suscipit sit eius possimus quam aut at maxime, doloremque minima assumenda rem beatae itaque, obcaecati eligendi officiis repellendus? Quos reprehenderit maiores unde ratione. At laboriosam aliquam sunt repellat ex placeat?</p>
-        </article> -->
+    <div class="chart-wrapper">
+        <div class="container">
+            <svg id="projects-pie-plot" viewBox="-50 -50 100 100" width="300" height="300">
+            </svg>
+            <ul class="legend"></ul>
+        </div>
     </div>
+    <input
+    class="searchBar"
+    type="search"
+    aria-label="Search projects"
+    placeholder="🔍 Search projects…"
+    />
+    <div class="projects"></div>
+    <script src="projects.js" type="module"></script>
 </body>
 </html>

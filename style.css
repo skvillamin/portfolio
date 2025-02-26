@@ -105,7 +105,22 @@ form textarea {
 .projects article h2 {
   margin: 0;
 }
+.projects article h2 a,
+.projects article h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
+.projects article h2 a:hover,
+.projects article h3 a:hover {
+    text-decoration: underline;
+}
+
+.projects article h2 a:visited,
+.projects article h3 a:visited {
+    color: inherit;
+}
 .projects article img {
   width: 100%;
   height: auto;

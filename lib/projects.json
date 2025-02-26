@@ -3,12 +3,14 @@
         "title": "The Battle for Carry: An Analysis of ADC vs Mid Players and Post-Game Role Predictive Model",
         "year": "2024",
         "image" : "https://vis-society.github.io/labs/2/images/empty.svg",
+        "url": "https://skvillamin.github.io/league-predictions/",
         "description": "Analyzed 2022 League of Legends data to assess the effectiveness of ADC and Mid roles in post-game performance."
     },
     {
         "title": "Analysis on the Impact of PokéStops Proximity on Restaurant Traffic",
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "url": "https://github.com/skvillamin/pokestops-analysis",
         "description": "Analyzed Yelp restaurant data to assess the impact of PokéStop proximity on restaurant traffic."
     },
     {
@@ -18,16 +20,17 @@
         "description": "Laudantium ut repellendus amet adipisci modi in nihil voluptatem eveniet natus, dicta cum asperiores quae magnam ex dolor. Dolores optio, dolore modi praesentium voluptatibus voluptates repudiandae numquam perferendis ducimus soluta!"
     },
     {
-        "title": "Predictive Modeling on Mahjong Optimal Strategies",
+        "title": "Predictive Modeling on Poker Optimal Strategies",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Eveniet unde rerum rem error delectus officiis architecto! Ratione repudiandae voluptate, cum quis enim laborum sunt id, dolore inventore autem magni molestiae impedit nisi in, rerum doloribus debitis. Autem, saepe."
     },
     {
-        "title": "Accusantium numquam ipsum nobis!",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorem totam laborum aliquam. Eligendi minus molestias a recusandae libero vitae iusto quo quisquam est accusantium tempora debitis autem voluptates ea magnam ipsam ratione alias, rem quod ex aspernatur eos?"
+        "title": "Geospatial Visualization on Bike Routes in Boston",
+        "year": "2025",
+        "image": "/images/bike.png",
+        "url": "https://skvillamin.github.io/bikewatching/",
+        "description": "Created an interactive visualization of Boston's BlueBikes system using D3.js and Mapbox. The project displays bike station traffic patterns, with circle sizes indicating total trips and colors showing the balance between arrivals and departures. Features include time-based filtering and bike route overlays for both Boston and Cambridge areas."
     },
     {
         "title": "Perspiciatis dignissimos ab porro.",

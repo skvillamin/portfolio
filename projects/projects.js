@@ -112,3 +112,16 @@ searchInput.addEventListener('input', (event) => {
   filterAndRenderProjects();
 });
 
+function createProjectCard(project) {
+  return `
+      <div class="project-card">
+          ${project.url 
+              ? `<a href="${project.url}" target="_blank">${project.title}</a>`
+              : `<span>${project.title}</span>`
+          }
+          <p class="year">${project.year}</p>
+          <img src="${project.image}" alt="${project.title}">
+          <p class="description">${project.description}</p>
+      </div>
+  `;
+}

@@ -180,7 +180,9 @@ function displayStats() {
       (v) => d3.max(v, (d) => d.line),
       (d) => d.file
     );
-    const averageFileLength = Math.round(d3.mean(fileLengths, (d) => d[1]));    
+    const averageFileLength = Math.round(
+        d3.mean(Array.from(fileLengths), ([_, length]) => length) || 0
+    );
     container = dl.append('div').attr('class', 'stat-block');
     container.append('dt').text('Average File Length');
     container.append('dd').text(averageFileLength);

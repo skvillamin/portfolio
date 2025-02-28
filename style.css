@@ -288,3 +288,206 @@ path {
     fill: var(--color);
   }
 }
+
+/* Container styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Chart styles */
+#chart {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2em auto;
+}
+
+svg {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+.dots circle {
+  opacity: 0.6;
+}
+
+.gridlines line {
+  stroke: #ddd;
+  stroke-width: 1px;
+}
+
+.gridlines path {
+  display: none;
+}
+
+/* Container for the entire stats section */
+#stats {
+  margin: 2em auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Make the definition list a flex container */
+.stats {
+  display: flex;
+  flex-wrap: wrap;        /* Allows wrapping if the screen is narrow */
+  justify-content: space-around;
+  margin: 0;              /* Remove default DL margins */
+  padding: 0;
+}
+
+/* Each stat block (one label + one value) */
+.stat-block {
+  display: flex;
+  flex-direction: column; /* dt on top, dd below */
+  align-items: center;    /* Center them horizontally */
+  margin: 1em 0;
+  flex: 1 1 100px;        /* Adjust so they size nicely */
+  text-align: center;     /* Center text in each block */
+}
+
+/* The label (dt) styling */
+.stat-block dt {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5em;
+}
+
+/* The numeric/value (dd) styling */
+.stat-block dd {
+  margin: 0;
+  color: #333;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+
+/* Axis styles */
+.axis text {
+  font-size: 12px;
+  color: #666;
+}
+
+.axis line {
+  stroke: #ddd;
+}
+
+.axis path {
+  stroke: #ddd;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  margin: 0;
+  padding: 0.5em;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+dl.info dt {
+  color: #666;
+  font-weight: normal;
+  text-align: right;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+/* Show tooltip when it has content */
+.tooltip:has(a[href]) {
+  opacity: 1;
+}
+/* Circle hover effects */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+circle:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+#language-breakdown {
+  margin: 1em auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  max-width: 800px;
+}
+
+#language-breakdown dt,
+#language-breakdown dd {
+  display: inline;
+  margin: 0;
+}
+
+#language-breakdown dt {
+  font-weight: 600;
+  margin-right: 0.5em;
+}
+
+#language-breakdown dt::after {
+  content: ":";
+}
+
+#language-breakdown dt,
+#language-breakdown dd {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+#selection-count {
+  font-size: 1.1em;
+  margin: 1em 0;
+  text-align: center;
+}

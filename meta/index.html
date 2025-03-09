@@ -10,8 +10,9 @@
 </head>
 <body>
     <h1>Meta</h1>
-    <h2>Commits by time of day</h2>
+    <h2>Summary Stats</h2>
     <div id="stats"></div>
+    <h2>Commits by time of day</h2>
     <dl class="files">
     </dl>
     <div id="scrollytelling">
@@ -22,19 +23,6 @@
         <!-- our old scatterplot div -->
         <div id="chart"></div>
     </div>
-    <section class="scrolly-section">
-        <div class="scrolly-container">
-          <div id="file-vis-container" class="vis-container">
-            <!-- File visualization will go here -->
-            <dl class="files-viz"></dl>
-          </div>
-          <div id="files-scroll-container" class="scroll-container">
-            <div id="files-spacer" class="spacer"></div>
-            <div id="files-items-container" class="items-container"></div>
-          </div>
-        </div>
-      </section>
-    <script src="main.js"></script>
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
     <dl id="commit-tooltip" class="info tooltip">
@@ -55,5 +43,19 @@
         <dt>Lines</dt>
         <dd id="commit-lines"></dd>
     </dl>
+    <section class="scrolly-section">
+        <div class="scrolly-container">
+          <div id="file-vis-container" class="vis-container">
+            <!-- File visualization will go here -->
+            <dl class="files-viz"></dl>
+          </div>
+          <div id="files-scroll-container" class="scroll-container">
+            <div id="files-spacer" class="spacer"></div>
+            <div id="files-items-container" class="items-container"></div>
+          </div>
+        </div>
+      </section>
+    <script src="main.js"></script>
+    
 </body>
 </html>

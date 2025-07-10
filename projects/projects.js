@@ -1,25 +1,8 @@
 import { fetchJSON, renderProjects } from '../global.js';
-
-// Use the globally loaded d3 instead of importing it again
-// const d3 is already available from the script tag
-
-console.log('D3 version:', d3.version);
-console.log('Starting projects.js...');
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm";
 
 // Fetch project data
-let projects = await fetchJSON('../lib/projects.json');
-console.log('Loaded projects:', projects);
-
-// Fallback data in case projects.json doesn't load
-if (!projects || projects.length === 0) {
-  console.log('No projects loaded, using fallback data');
-  projects = [
-    { title: "Sample Project 1", year: "2024", description: "A sample project", image: "" },
-    { title: "Sample Project 2", year: "2023", description: "Another sample project", image: "" },
-    { title: "Sample Project 3", year: "2024", description: "Third sample project", image: "" }
-  ];
-}
-
+const projects = await fetchJSON('../lib/projects.json');
 const projectsContainer = document.querySelector('.projects');
 renderProjects(projects, projectsContainer, 'h2');
 
@@ -31,16 +14,12 @@ const colorScale = d3.scaleOrdinal()
 let selectedIndex = -1;
 let query = '';
 
-// Function to render the pie chart and legend
+// Function to render the pie chart and 
 function renderPieChart(projectsGiven) {
-  console.log('renderPieChart called with:', projectsGiven);
-  
   // Clear existing paths and legend items
   let svg = d3.select('svg');
-  console.log('SVG element found:', svg.node());
   svg.selectAll('path').remove();
   let legend = d3.select('.legend');
-  console.log('Legend element found:', legend.node());
   legend.selectAll('li').remove();
 
   // Re-calculate rolled data
@@ -122,8 +101,7 @@ function filterAndRenderProjects() {
   renderPieChart(filteredProjects);
 }
 
-// Call this function on page load to render the initial pie chart
-console.log('Calling renderPieChart with projects:', projects);
+// Call this function on page load
 renderPieChart(projects);
 
 // Add search functionality
@@ -135,15 +113,25 @@ searchInput.addEventListener('input', (event) => {
 });
 
 function createProjectCard(project) {
-  return `
-      <div class="project-card">
-          ${project.url 
-              ? `<a href="${project.url}" target="_blank">${project.title}</a>`
-              : `<span>${project.title}</span>`
-          }
+  if (project.url) {
+    return `
+      <a href="${project.url}" target="_blank" class="project-link" style="text-decoration:none;color:inherit;display:block;">
+        <article>
+          <h2>${project.title}</h2>
           <p class="year">${project.year}</p>
           <img src="${project.image}" alt="${project.title}">
           <p class="description">${project.description}</p>
-      </div>
-  `;
+        </article>
+      </a>
+    `;
+  } else {
+    return `
+      <article>
+        <h2>${project.title}</h2>
+        <p class="year">${project.year}</p>
+        <img src="${project.image}" alt="${project.title}">
+        <p class="description">${project.description}</p>
+      </article>
+    `;
+  }
 }

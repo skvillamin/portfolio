@@ -2,22 +2,14 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="projects-style.css">
-    <link rel="stylesheet" href="../mediaqueries.css">
+    <link rel="stylesheet" href="../projects/projects-style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="../global.js" type="module"></script>
-    <title>Projects - Katelyn Villamin</title>
+    <title>Portfolio</title>
 </head>
 <body>
-    <!-- Back Button -->
-    <div class="back-button-container">
-        <button class="btn btn-color-2 back-btn" onclick="location.href='../index.html#projects'">
-            ← Back to Home
-        </button>
-    </div>
-
+    <button class="btn btn-color-2" onclick="window.history.back();">← Back to Home</button>
     <h1 class="projects-title">All Projects</h1>
     <div class="chart-wrapper">
         <div class="container">
@@ -30,7 +22,7 @@
     class="searchBar"
     type="search"
     aria-label="Search projects"
-    placeholder="Search projects…"
+    placeholder="🔍 Search projects…"
     />
     <div class="projects"></div>
     <script src="projects.js" type="module"></script>

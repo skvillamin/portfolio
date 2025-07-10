@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="projects-style.css">
+    <link rel="stylesheet" href="../mediaqueries.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="../global.js" type="module"></script>
+    <title>Projects - Katelyn Villamin</title>
+</head>
+<body>
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <button class="btn btn-color-2 back-btn" onclick="location.href='../index.html#projects'">
+            ← Back to Home
+        </button>
+    </div>
+
+    <h1 class="projects-title">All Projects</h1>
+    <div class="chart-wrapper">
+        <div class="container">
+            <svg id="projects-pie-plot" viewBox="-50 -50 100 100" width="300" height="300">
+            </svg>
+            <ul class="legend"></ul>
+        </div>
+    </div>
+    <input
+    class="searchBar"
+    type="search"
+    aria-label="Search projects"
+    placeholder="Search projects…"
+    />
+    <div class="projects"></div>
+    <script src="projects.js" type="module"></script>
+</body>
+</html>

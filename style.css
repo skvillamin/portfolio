@@ -28,6 +28,7 @@ p {
     color: rgb(85, 85, 85);
 }
 
+
 /*TRANSITIONS*/
 a, .btn {
     transition: all 300ms ease;
@@ -194,22 +195,24 @@ section {
 
 .section__text__p1 {
     text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 .section__text__p2 {
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .title {
     font-size: 3rem;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 #socials-container {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     gap: 1rem;
 }
 
@@ -226,6 +229,8 @@ section {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .btn {

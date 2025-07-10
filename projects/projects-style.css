@@ -11,7 +11,7 @@
 body {
     font-family: "Figtree", sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
 /* Page layout to match main site */
@@ -270,6 +270,8 @@ h3, h4 {
   flex: 2 1 200px;
   min-width: 15em;
   box-sizing: border-box;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .legend-item {
@@ -292,11 +294,26 @@ h3, h4 {
   margin-right: 0.5em;
 }
 
-.legend-item:nth-of-type(1) .swatch { background-color: #A8D5BA !important; }
-.legend-item:nth-of-type(2) .swatch { background-color: #FFE29A !important; }
-.legend-item:nth-of-type(3) .swatch { background-color: #FFB3AB !important; }
-.legend-item:nth-of-type(4) .swatch { background-color: #B5C7E3 !important; }
-.legend-item:nth-of-type(5) .swatch { background-color: #AED9E0 !important; }
+.legend li {
+  margin-bottom: 1em;
+}
+
+.legend .swatch {
+  margin-right: 0.8em;
+}
+
+.legend li em {
+  font-size: 1em;
+}
+
+.legend li span.year-label {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+
+
 
 .search-container {
   margin: 1em 0;
@@ -816,4 +833,14 @@ circle.selected {
 /* Hide pointer on nested article for non-links */
 .projects article {
   cursor: default;
+}
+
+svg path.selected {
+  fill: #4B7F5A !important; /* darker green */
+  stroke: none;
+  filter: none;
+}
+
+.legend li.selected .swatch {
+  background-color: #4B7F5A !important;
 }

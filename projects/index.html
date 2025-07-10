@@ -9,7 +9,34 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <button class="btn btn-color-2" onclick="window.history.back();">← Back to Home</button>
+    <nav id="desktop-nav">
+        <div class="logo"> Katelyn Villamin</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="/index.html#about">About</a></li>
+                <li><a href="/index.html#experience">Experience</a></li>
+                <li><a href="/index.html#projects">Projects</a></li>
+                <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"> Katelyn Villamin</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="/index.html#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="/index.html#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="/index.html#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="/index.html#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+
+    </nav>    
     <h1 class="projects-title">All Projects</h1>
     <div class="chart-wrapper">
         <div class="container">
@@ -22,7 +49,7 @@
     class="searchBar"
     type="search"
     aria-label="Search projects"
-    placeholder="🔍 Search projects…"
+    placeholder="Search projects…"
     />
     <div class="projects"></div>
     <script src="projects.js" type="module"></script>

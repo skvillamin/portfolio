@@ -9,10 +9,24 @@ renderProjects(projects, projectsContainer, 'h2');
 // Create a fixed color scale based on the year values
 const colorScale = d3.scaleOrdinal()
   .domain(projects.map(project => project.year))
-  .range(d3.schemeTableau10);
+  .range([
+  "#A8D5BA",
+  "#FFE29A",
+  "#FFB3AB",
+  "#B5C7E3",
+  "#AED9E0"
+]);;
 
 let selectedIndex = -1;
 let query = '';
+
+// Sort projects by year (descending, numeric) and then by title (optional, for tie-breaker)
+projects.sort((a, b) => {
+  if (parseInt(b.year) !== parseInt(a.year)) {
+    return parseInt(b.year) - parseInt(a.year);
+  }
+  return b.title.localeCompare(a.title);
+});
 
 // Function to render the pie chart and 
 function renderPieChart(projectsGiven) {
@@ -29,9 +43,27 @@ function renderPieChart(projectsGiven) {
     (d) => d.year,
   );
 
+  // Sort legend years descending (latest first)
+  newRolledData.sort((a, b) => parseInt(b[0]) - parseInt(a[0]));
+
   // Re-calculate data
   let newData = newRolledData.map(([year, count]) => {
     return { value: count, label: year };
+  });
+
+  // Assign color for each year in sorted order
+  const legendColors = [
+    "#A8D5BA",
+    "#FFE29A",
+    "#FFB3AB",
+    "#B5C7E3",
+    "#AED9E0"
+  ];
+
+  // Map year to color based on sorted order
+  const yearToColor = {};
+  newData.forEach((d, idx) => {
+    yearToColor[d.label] = legendColors[idx % legendColors.length];
   });
 
   // Re-calculate slice generator, arc data, arc, etc.
@@ -43,7 +75,7 @@ function renderPieChart(projectsGiven) {
   arcs.forEach((arc, i) => {
     svg.append('path')
       .attr('d', arc)
-      .attr('fill', colorScale(newData[i].label))
+      .attr('fill', yearToColor[newData[i].label])
       .attr('class', i === selectedIndex ? 'selected' : '')
       .on('click', () => {
         selectedIndex = selectedIndex === i ? -1 : i;
@@ -54,9 +86,9 @@ function renderPieChart(projectsGiven) {
   // Update legend
   newData.forEach((d, idx) => {
     legend.append('li')
-      .attr('style', `--color:${colorScale(d.label)}`)
+      .attr('style', `--color:${yearToColor[d.label]}`)
       .attr('class', idx === selectedIndex ? 'selected' : '')
-      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`)
+      .html(`<span class="swatch"></span> <span class="year-label">${d.label}</span> <em>(${d.value})</em>`)
       .on('click', () => {
         selectedIndex = selectedIndex === idx ? -1 : idx;
         updateSelection();
@@ -102,6 +134,7 @@ function filterAndRenderProjects() {
 }
 
 // Call this function on page load
+renderProjects(projects, projectsContainer, 'h2');
 renderPieChart(projects);
 
 // Add search functionality

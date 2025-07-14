@@ -2,56 +2,48 @@
     {
         "title": "The Battle for Carry: An Analysis of ADC vs Mid Players and Post-Game Role Predictive Model",
         "year": "2024",
-        "image" : "/assets/league.jpg",
         "url": "https://skvillamin.github.io/league-predictions/",
         "description": "An analysis 2022 League of Legends data to assess the effectiveness of ADC and Mid roles in post-game performance and predict the role based on post-game statistics."
     },
     {
         "title": "Analysis on the Impact of PokéStops Proximity on Restaurant Traffic",
         "year": "2024",
-        "image": "/assets/pokemon.jpg",
         "url": "https://github.com/skvillamin/pokestops-analysis",
         "description": "An investigation on the impact of Pokémon Go’s PokéStops on local restaurant traffic using Yelp check-in data."
     },
     {
         "title": "Genre Classification based on Amazon Book Summaries",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://drive.google.com/file/d/1stI3kQuRh5aBgtE_vdUnJA4dtFUlDtse/view?usp=sharing",
         "description": "Built a classification model to predict book genres based on short summaries from over 200,000 book entries, using natural language processing techniques."
     },
     {
         "title": "Predictive Modeling on Poker Optimal Strategies",
         "year": "2025",
-        "image": "/assets/poker-chips.jpg",
         "url": "https://github.com/hakwok/AlreadyIntelligent",
         "description": "A demonstraion on Bayesian networks and Monte Carlo models can optimize a goal-based AI agent’s decision-making in Poker through probabilistic reasoning and adaptability in a dynamic, partially observable environment."
     },
     {
         "title": "Geospatial Visualization on Bike Routes in Boston",
         "year": "2025",
-        "image": "/assets/bike-route.jpg",
         "url": "https://skvillamin.github.io/bikewatching/",
         "description": "An interactive visualization of Boston's BlueBikes system using D3.js and Mapbox. Features include time-based filtering and bike route overlays for both Boston and Cambridge areas."
     },
     {
         "title": "Gamified Unplugged: How Gamifying Surveys Reduces Cognitive Load",
         "year": "2025",
-        "image": "/assets/gamify.png",
         "url": "https://nglyry.github.io/Final-Proj-Dsc106/writeup/",
         "description": "An interactive visualization of how gamified surveys affect cognitive load, using biometric data such as ECG and brain waves."
     },
     {
         "title": "Predicting AirBnB Prices",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "url": "https://github.com/skvillamin/airbnb-prices",
         "description": "A prediction on Airbnb prices using machine learning models like XGBoost and Gradient Boosting based on location, amenities and property features, ranking 7th out of 100+ participants."
     },
     {
         "title": "Customer Segmentation Analysis",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A comprehensive analysis using K-means clustering to identify distinct customer segments based on purchasing behavior and demographics."
     }
 ]

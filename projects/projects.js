@@ -152,7 +152,6 @@ function createProjectCard(project) {
         <article>
           <h2>${project.title}</h2>
           <p class="year">${project.year}</p>
-          <img src="${project.image}" alt="${project.title}">
           <p class="description">${project.description}</p>
         </article>
       </a>
@@ -162,7 +161,6 @@ function createProjectCard(project) {
       <article>
         <h2>${project.title}</h2>
         <p class="year">${project.year}</p>
-        <img src="${project.image}" alt="${project.title}">
         <p class="description">${project.description}</p>
       </article>
     `;
